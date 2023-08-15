@@ -1,0 +1,12 @@
+import pandas as pd
+
+#We add csv files from github - NOT from google drive - this ensures anyone can run your code even without access to your google drive.
+#Copy and paste the code below
+!pip install git+https://github.com/Constratum/product-data.git
+
+from product_data import constratum_product_data_in
+tiles = constratum_product_data_in.get_df_from_file_name("Ceiling Tiles.csv")
+
+tiles
+
+df[[['Manufactor']=='Asona'] & (df[length]==1200)]
